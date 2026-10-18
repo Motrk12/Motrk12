@@ -24,6 +24,16 @@
 
 ### 🚀 Featured projects
 
+#### 🦠 [Project Revenant](https://github.com/Motrk12/Renevant): AI intrusion detection & self-healing file recovery
+`C# / .NET 8` `Python` `FastAPI` `LightGBM` `PyTorch` `ONNX` `PostgreSQL` `React + TypeScript` `Docker` · *Team of 5*
+
+An AI intrusion detection system that protects a Windows PC from malware, ransomware and network attacks, and automatically restores the files an attack damages.
+
+- A **native Windows agent** streams file, process and network telemetry over **mutual TLS** to a management laptop. Three ML models score it there: LightGBM on EMBER2024 and CIC-IDS2017, and a PyTorch GRU on RanSAP, all served as ONNX.
+- The laptop answers with **Ed25519-signed commands** (terminate, quarantine, isolate, delete, restore). Detections are mapped to **MITRE ATT&CK**, and every response step is recorded in a **hash-chained audit log**.
+- Before a protected file changes, the agent pushes the old version to a **write-only vault**. Ransomware on the PC can't read or delete the backups.
+- **Results:** across 10 end-to-end runs, the median time from detection to the last file restored was **0.476 s**, and **80/80 files** came back byte-identical and hash-verified.
+
 #### 🩺 Veterinary Clinic Management System
 `Next.js 14` `React` `TypeScript` `Tailwind CSS` `Supabase (PostgreSQL, Auth, RLS)` `Vercel` `Claude Code`
 
@@ -34,11 +44,6 @@ A bilingual Arabic/English clinic management system **rolled out to 7 veterinary
 - About **20,000 lines** of TypeScript and SQL across **26 migrations**, with PDF receipts, an Excel export with no dependencies, and WhatsApp messaging.
 
 <sub>🔒 The source code is private.</sub>
-
-#### 🦠 AI-Driven Intrusion Detection & Ransomware Recovery
-`AI/ML` `Malware detection` `Ransomware recovery` `Backup server` · *Team of 5*
-
-An AI-driven intrusion detection system that detects and removes malware and ransomware, then restores the affected files automatically from a separate backup server that holds clean copies. We delivered it in about three months.
 
 #### 🛍️ NileDrip, a clothing marketplace
 `HTML` `CSS` `JavaScript` `Node.js` `Express` `MongoDB` `JWT` `Vercel`
@@ -71,16 +76,17 @@ A marketplace for Egyptian local brands with customer, seller and admin roles: l
 ### 🛠️ Skills
 
 <p>
-  <img src="https://skillicons.dev/icons?i=ts,js,py,java,cpp,cs,nextjs,react,nodejs,express,tailwind,html,css,postgres,supabase,mongodb,vercel,cloudflare,git,github&perline=10" alt="Tech stack">
+  <img src="https://skillicons.dev/icons?i=ts,js,py,java,cpp,cs,dotnet,nextjs,react,nodejs,express,fastapi,tailwind,html,css,postgres,supabase,mongodb,redis,pytorch,docker,vercel,cloudflare,git,github&perline=13" alt="Tech stack">
 </p>
 
 | Area | Skills |
 |---|---|
-| **Security** | Role-based access control · PostgreSQL RLS · JWT & bcrypt · Cloudflare Turnstile · Firewalls · Malware detection & recovery |
+| **Security** | Role-based access control · PostgreSQL RLS · JWT & bcrypt · Mutual TLS · Ed25519 signing · Cloudflare Turnstile · Firewalls · Malware detection & recovery · MITRE ATT&CK |
 | **Networking** | Routing & switching · VLANs · OSPF · EIGRP · DHCP · DNS · MDF/IDF build-out · Wireless APs · Cisco Packet Tracer |
-| **Programming** | TypeScript · JavaScript · Python · Java · C++ · SQL |
-| **Web & backend** | React · Next.js · Node.js · Express · Tailwind CSS · REST APIs · HTML/CSS |
-| **Data, cloud & tools** | PostgreSQL · Supabase · MongoDB · Vercel · Git & GitHub · Claude Code |
+| **Programming** | TypeScript · JavaScript · Python · C# · Java · C++ · SQL |
+| **Web & backend** | React · Next.js · Node.js · Express · FastAPI · .NET · Tailwind CSS · REST APIs · HTML/CSS |
+| **AI / ML** | LightGBM · PyTorch · scikit-learn · ONNX |
+| **Data, cloud & tools** | PostgreSQL · Supabase · MongoDB · Redis · Docker · Vercel · Git & GitHub · Claude Code |
 
 ---
 
